@@ -11,5 +11,7 @@ export function renderGoblin(goblinData) {
     hpEl.textContent = goblinData.hp < 0 ? 0 : goblinData.hp;
     emojiEl.textContent = goblinData.hp > 0 ? '😈' : '🔥';
 
-    
+    goblinEl.append(nameEl, emojiEl, hpEl);
+
+    return goblinEl;
 }

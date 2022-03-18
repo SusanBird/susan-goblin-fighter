@@ -35,5 +35,7 @@ formEl.addEventListener('submit', (e) => {
 
     goblins.unshift(newGoblin);
 
+    console.log(goblins);
+
     formEl.reset();
 });
