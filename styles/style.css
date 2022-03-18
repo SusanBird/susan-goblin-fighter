@@ -176,3 +176,7 @@ form {
 .game-over {
     transform: rotate(90deg);
 }
+
+#hangry-img {
+    width: 20px;
+}

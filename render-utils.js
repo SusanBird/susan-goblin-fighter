@@ -3,22 +3,31 @@ export function renderGoblin(goblinData) {
     const goblinEl = document.createElement('div');
     const nameEl = document.createElement('p');
     const hpEl = document.createElement('p');
+    const imgEl = document.createElement('img');
+    //const hangryEL = document.createElement('img')
 
     goblinEl.classList.add('goblin');
 
-    let goblinEmoji = '';
+    nameEl.textContent = goblinData.name;
+    hpEl.textContent = `${goblinData.hp}`;
+    imgEl.src = `assets/goblin-${1}.png`;
+    //imgEl.textContent = goblinData.hp > 0 ? '😈' : '🔥';
 
-    if (goblinData.hp === 3) {
-        goblinEmoji = <img src="assets/hangry.png" />;
-    } else if (goblinData.hp === 1 || goblinData.hp === 2) {
-        goblinEmoji = '😈';
-    } else if (goblinData.hp < 1) {
-        goblinEmoji = '🔥';
+    //hangryEL.src = `assets/goblin-1.png`;
+
+    // let goblinEmoji = '';
+
+    // if (goblinData.hp === 3) {
+    //     goblinEmoji = hangryEL.src ;
+    // } else if (goblinData.hp === 1 || goblinData.hp === 2) {
+    //     goblinEmoji = '😈';
+    // } else if (goblinData.hp < 1) {
+    //     goblinEmoji = '🔥';
+    //}
+
+    if (goblinData.hp < 0) { 
         goblinEl.classList.add('dead');
     }
-
-    nameEl.textContent = goblinData.name;
-    hpEl.textContent = `${goblinEmoji} ${goblinData.hp}`;
 
     goblinEl.append(nameEl, hpEl);
 
