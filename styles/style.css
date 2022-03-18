@@ -28,7 +28,7 @@ body {
 
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
-    background-image: url(../assets/castle.png);
+    background-image: url(../assets/buffet.png);
     background-size: 105%;
     background-position: center;
     text-align: center;
@@ -145,7 +145,7 @@ footer {
 .defeated-goblins p {
     font-size: 2rem;
     color: white;
-    background-color: rebeccapurple;
+    background-color: rgb(99, 83, 116);
     padding: 20px;
     border-radius: 15px;
 }

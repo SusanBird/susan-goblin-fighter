@@ -67,7 +67,7 @@ function displayGoblins() {
                     alert('you tried to hit ' + goblin.name + ' but missed');
                 }
 
-                if (Math.random() < .5) {
+                if (Math.random() < .25) {
                     playerHP--;
                     alert(goblin.name + ' hit you!');
                 } else {
