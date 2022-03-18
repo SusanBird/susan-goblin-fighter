@@ -1,17 +1,25 @@
 export function renderGoblin(goblinData) {
 
     const goblinEl = document.createElement('div');
-    const emojiEl = document.createElement('p');
     const nameEl = document.createElement('p');
     const hpEl = document.createElement('p');
 
     goblinEl.classList.add('goblin');
 
+    let goblinEmoji = '';
+
+    if (goblinData.hp === 3) {
+        goblinEmoji = '😈';
+    } else if (goblinData.hp === 1 || goblinData.hp === 2) {
+        goblinEmoji = '😈';
+    } else if (goblinData.hp < 1) {
+        goblinEmoji = '🔥';
+    }
+
     nameEl.textContent = goblinData.name;
     hpEl.textContent = goblinData.hp < 0 ? 0 : goblinData.hp;
-    emojiEl.textContent = goblinData.hp > 0 ? '😈' : '🔥';
 
-    goblinEl.append(nameEl, emojiEl, hpEl);
+    goblinEl.append(nameEl, hpEl);
 
     return goblinEl;
 }
