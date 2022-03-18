@@ -14,6 +14,7 @@ export function renderGoblin(goblinData) {
         goblinEmoji = '😈';
     } else if (goblinData.hp < 1) {
         goblinEmoji = '🔥';
+        goblinEl.classList.add('dead');
     }
 
     nameEl.textContent = goblinData.name;

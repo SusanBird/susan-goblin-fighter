@@ -33,7 +33,7 @@ formEl.addEventListener('submit', (e) => {
     // };
 
     // get user input from form
-    const data = new FormData(form);
+    const data = new FormData(formEl);
 
     const goblinName = data.get('goblin-name');
 
@@ -50,3 +50,51 @@ formEl.addEventListener('submit', (e) => {
 
     displayGoblins();
 });
+
+function displayGoblins() {
+    goblinListEl.textContent = '';
+
+    for (let goblin of goblins) {
+        const goblinEl = renderGoblin(goblin);
+
+        if (goblin.hp > 0) {
+            goblinEl.addEventListener('click', () => {
+        
+                if (Math.random() < .33) {
+                    goblin.hp--;
+                    alert('you hit ' + goblin.name);
+                } else {
+                    alert('you tried to hit ' + goblin.name + ' but missed');
+                }
+
+                if (Math.random() < .5) {
+                    playerHP--;
+                    alert(goblin.name + ' hit you!');
+                } else {
+                    alert(goblin.name + ' tried to hit you but missed!');
+                }
+
+                if (goblin.hp === 0) {
+                    defeatedGoblinsNumber++;
+                }
+
+                if (playerHP === 0) {
+                    playerImgEl.classList.add('game-over');
+                    alert('GAME OVER!!!');
+                }
+
+                playerHpEL.textContent = playerHP;
+                defeatedNumberEl.textContent = defeatedGoblinsNumber;
+
+                displayGoblins();
+            });
+            goblinListEl.append(goblinEl);
+        }
+    }
+}
+
+
+
+
+displayGoblins();
+
