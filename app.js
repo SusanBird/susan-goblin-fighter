@@ -27,15 +27,26 @@ formEl.addEventListener('submit', (e) => {
     e.preventDefault();
 
     //alert('submitted form!');
+    // const newGoblin = {
+    //     name: 'Hank',
+    //     hp: 2,
+    // };
 
+    // get user input from form
+    const data = new FormData(form);
+
+    const goblinName = data.get('goblin-name');
+
+    // new gobject with user input
     const newGoblin = {
-        name: 'Frankie',
-        hp: 2,
+        name: goblinName,
+        hp: Math.ceil(Math.random() * 10),
     };
 
     goblins.unshift(newGoblin);
 
-    console.log(goblins);
+    //console.log(goblins);
+    //formEl.reset();
 
-    formEl.reset();
+    displayGoblins();
 });
