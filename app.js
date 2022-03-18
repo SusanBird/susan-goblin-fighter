@@ -10,8 +10,8 @@ const playerImgEl = document.getElementById('player-img');
 //console.log(formEl, goblinListEl, defeatedNumberEl, playerHpEL);
 
 // let state
-let playerHpEL = 10;
-let defeatedNumberEl = 0;
+let playerHP = 10;
+let defeatedGoblinsNumber = 0;
 let goblins = [
     { name: 'Dirk', hp: 4 },
     { name: 'Spud', hp: 7 },
@@ -23,10 +23,17 @@ let goblins = [
   // update DOM to reflect the new state
 
   // create new goblin form 
-  form.addEventListener('submit', (e) => {
+formEl.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    alert('submitted form!');
+    //alert('submitted form!');
+
+    const newGoblin = {
+        name: 'Frankie',
+        hp: 2,
+    };
+
+    goblins.unshift(newGoblin);
 
     formEl.reset();
-  });
+});
