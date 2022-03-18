@@ -13,7 +13,7 @@ const playerImgEl = document.getElementById('player-img');
 let playerHP = 10;
 let defeatedGoblinsNumber = 0;
 let goblins = [
-    { name: 'Dirk', hp: 4 },
+    { name: 'Dirk', hp: 3 },
     { name: 'Spud', hp: 7 },
 ];
 

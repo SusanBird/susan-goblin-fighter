@@ -9,7 +9,7 @@ export function renderGoblin(goblinData) {
     let goblinEmoji = '';
 
     if (goblinData.hp === 3) {
-        goblinEmoji = '😈';
+        goblinEmoji = <img src="assets/hangry.png" />;
     } else if (goblinData.hp === 1 || goblinData.hp === 2) {
         goblinEmoji = '😈';
     } else if (goblinData.hp < 1) {
