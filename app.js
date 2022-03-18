@@ -17,8 +17,16 @@ let goblins = [
     { name: 'Spud', hp: 7 },
 ];
 
-
 // set event listeners 
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
+
+  // create new goblin form 
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    alert('submitted form!');
+
+    formEl.reset();
+  });
