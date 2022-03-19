@@ -67,7 +67,7 @@ function displayGoblins() {
                     alert('you tried to hit ' + goblin.name + ' but missed');
                 }
 
-                if (Math.random() < .25) {
+                if (Math.random() < .5) {
                     playerHP--;
                     alert(goblin.name + ' hit you!');
                 } else {
@@ -80,7 +80,7 @@ function displayGoblins() {
 
                 if (playerHP === 0) {
                     playerImgEl.classList.add('game-over');
-                    alert('GAME OVER!!!');
+                    alert('Oh no, you ran out of food. Now they are coming for you. Runnnn!');
                 }
 
                 playerHpEL.textContent = playerHP;
