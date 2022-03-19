@@ -29,7 +29,7 @@ export function renderGoblin(goblinData) {
         goblinEl.classList.add('dead');
     }
 
-    goblinEl.append(nameEl, hpEl);
+    goblinEl.append(nameEl, imgEl, hpEl);
 
     return goblinEl;
 }

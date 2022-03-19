@@ -101,6 +101,7 @@ footer {
 .player-hp img {
     width: 250px;
 }
+
 .player-hp {
     color: #ffffff;
     font-size: 5rem;
@@ -166,6 +167,12 @@ form {
     background-color: rgb(76, 86, 173);
     justify-self: flex-end;
     font-size: 3rem;
+    height: 85px;
+}
+
+.goblin img {
+    width: 120px;
+    height: auto;
 }
 
 .dead {
@@ -177,6 +184,6 @@ form {
     transform: rotate(90deg);
 }
 
-#hangry-img {
+/* #hangry-img {
     width: 20px;
-}
+} */
